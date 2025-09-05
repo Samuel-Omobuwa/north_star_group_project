@@ -292,7 +292,7 @@ export default function HomePage() {
             </Button>
           </div>
 
-          <div className="space-y-8 ml-30">
+          <div className="hidden md:block space-y-8 md:ml-30">
             <div className="flex items-center gap-4">
               <div className="text-4xl font-bold text-blue-400">500+</div>
               <div className="text-gray-300">Over 500 globally for NSG</div>
