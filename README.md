@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NorthStar Group (NSG) - Digital Gold & Silver Platform
 
-## Getting Started
+A modern financial technology platform built with Next.js that enables users to manage, spend, and save in physical gold and silver while providing seamless digital currency transactions.
 
-First, run the development server:
+## 🌟 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+NorthStar Group is a comprehensive fintech application that bridges traditional precious metals investment with modern digital currency capabilities. The platform offers users the ability to spend and save in digitalized physical gold and silver, earn rewards for transactions, and access borderless financial services.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Core Financial Services
+- **Gold & Silver Management** - Spend and save in digitalized physical gold and silver
+- **Digital Currency Trading** - Buy and sell digital currencies 24/7 starting at $1
+- **Kinesis Virtual Card** - Instant spending of gold, silver, and digital currency globally
+- **Remittance Services** - Send money globally in seconds with low flat fees (0.45%)
+- **Rewards System** - Earn gold and silver for every transaction
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Platform Capabilities
+- **Mobile App Integration** - Complete financial management on mobile devices
+- **CoolWallet Hardware** - Secure offline storage for digital assets
+- **Real-time Pricing** - Live gold and silver market pricing
+- **24/7 Trading** - Round-the-clock digital currency transactions
+- **Global Accessibility** - Borderless payments and transfers
 
-## Learn More
+### Security & Trust
+- **Biometric Authentication** - Advanced security with 2FA
+- **Fully Allocated Metals** - Industry-leading precious metals allocation
+- **Regulatory Compliance** - World-class security standards
+- **Transparent Operations** - Real-time asset verification
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** Next.js with App Router
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **UI Components:** Radix UI + shadcn/ui
+- **Icons:** Lucide React
+- **Fonts:** Geist Sans & Geist Mono
+- **Analytics:** Vercel Analytics
+- **Form Handling:** React Hook Form + Zod validation
+- **Charts:** Recharts
+- **Animations:** Tailwind CSS Animate

@@ -1,45 +1,42 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { SiteHeader } from "@/components/site-header"
-import { Eye, EyeOff } from "lucide-react"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { SiteHeader } from "@/components/site-header";
+import { Eye, EyeOff } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function LoginPage() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [email, setEmail] = useState("northstargroup@gmail.com")
-  const [password, setPassword] = useState("")
+  const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("northstargroup@gmail.com");
+  const [password, setPassword] = useState("");
 
   return (
     <div className="min-h-screen bg-gray-900">
       <SiteHeader />
 
-      <main className="flex flex-col items-center justify-center px-6 py-12">
+      <main className="flex flex-col items-center justify-center px-6 py-12 ">
         {/* Logo */}
+        <div className="bg-[#1B1B27]"></div>
         <div className="mb-8">
           <div className="flex flex-col items-center space-y-2">
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-white"
-            >
-              <path
-                d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"
-                fill="currentColor"
-              />
-            </svg>
-            <span className="text-xs font-medium text-gray-400 tracking-wider">NORTHSTAR</span>
+            <Image
+              src="/icons/logoGlow.png"
+              alt="Northstar Group Logo"
+              width={200}
+              height={200}
+            />
+           
           </div>
         </div>
 
         {/* Welcome Section */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-semibold text-white mb-2">Welcome Back</h1>
+          <h1 className="text-2xl font-semibold text-white mb-2">
+            Welcome Back
+          </h1>
           <p className="text-gray-400 text-sm">Log in to your account</p>
         </div>
 
@@ -70,19 +67,29 @@ export default function LoginPage() {
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300"
             >
-              {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              {showPassword ? (
+                <EyeOff className="h-4 w-4" />
+              ) : (
+                <Eye className="h-4 w-4" />
+              )}
             </button>
           </div>
 
           {/* Forgot Password */}
           <div className="text-right">
-            <Link href="/forgot-password" className="text-sm text-blue-400 hover:text-blue-300">
+            <Link
+              href="/forgot-password"
+              className="text-sm text-blue-400 hover:text-blue-300"
+            >
               Forgot Password?
             </Link>
           </div>
 
           {/* Continue with Email Button */}
-          <Button className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3" size="lg">
+          <Button
+            className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3"
+            size="lg"
+          >
             Continue with email
           </Button>
 
@@ -137,5 +144,5 @@ export default function LoginPage() {
         </div>
       </main>
     </div>
-  )
+  );
 }

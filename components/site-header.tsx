@@ -11,10 +11,10 @@ export function SiteHeader() {
         <Link href="/" className="flex items-center space-x-2">
           <div className="flex items-center space-x-2">
             <Image
-              src="/icons/logo.svg"
+              src="/icons/logoGlow.png"
               alt="Northstar Group Logo"
-              width={80}
-              height={80}
+              width={150}
+              height={150}
             />
           </div>
         </Link>

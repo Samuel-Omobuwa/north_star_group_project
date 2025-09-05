@@ -1,7 +1,8 @@
-import { SiteHeader } from "@/components/site-header"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import Link from "next/link"
+import { SiteHeader } from "@/components/site-header";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function SignUpPage() {
   return (
@@ -13,19 +14,22 @@ export default function SignUpPage() {
           {/* Logo */}
           <div className="text-center">
             <div className="flex items-center justify-center mb-8">
-              <div className="w-12 h-12 bg-white rounded flex items-center justify-center">
-                <div
-                  className="w-6 h-6 bg-northstar"
-                  style={{
-                    clipPath:
-                      "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
-                  }}
-                ></div>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/icons/logoGlow.png"
+                  alt="Northstar Group Logo"
+                  width={150}
+                  height={150}
+                />
               </div>
             </div>
 
-            <h1 className="text-3xl font-bold text-white mb-2">Welcome to North Star Group</h1>
-            <p className="text-gray-400">Sign up with your email address or Google account.</p>
+            <h1 className="text-3xl font-bold text-white mb-2">
+              Welcome to North Star Group
+            </h1>
+            <p className="text-gray-400">
+              Sign up with your email address or Google account.
+            </p>
           </div>
 
           {/* Sign Up Form */}
@@ -91,5 +95,5 @@ export default function SignUpPage() {
         </div>
       </main>
     </div>
-  )
+  );
 }
