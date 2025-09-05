@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Northstar Group",
   description: "A crypto exchange web application",
-  themeColor: "[#13131D]",
+  icons: "favicon.ico",
+ 
 };
 
 export default function RootLayout({

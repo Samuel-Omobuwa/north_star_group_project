@@ -14,7 +14,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen ">
       <SiteHeader />
 
       <main className="flex flex-col items-center justify-center px-6 py-12 ">
