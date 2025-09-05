@@ -1,98 +1,68 @@
 "use client";
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
-import { useState } from "react";
-import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { Logo } from "./ui/logo";
-import { Button } from "./ui/button";
-
-const mainNav = [
-  { title: "Home", href: "/" },
-  { title: "Investor", href: "/investor" },
-  { title: "Products", href: "/products" },
-  { title: "Roadmap", href: "/roadmap" },
-  { title: "About", href: "/about" },
-  { title: "Support", href: "/support" },
-];
-
-export default function SiteHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 ">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <Logo />
+    <header className="border-b border-gray-800 bg-gray-900">
+      <div className="container mx-auto flex h-16 items-center justify-between px-6">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-white"
+            >
+              <path
+                d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"
+                fill="currentColor"
+              />
+            </svg>
+            <span className="text-sm font-medium text-white">NORTHSTAR</span>
+          </div>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
-          {mainNav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {item.title}
-            </Link>
-          ))}
+        {/* Navigation */}
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link href="/" className="text-sm text-blue-400 hover:text-blue-300 border-b-2 border-blue-400 pb-1">
+            Home
+          </Link>
+          <Link href="/investor" className="text-sm text-gray-300 hover:text-white">
+            Investor
+          </Link>
+          <Link href="/products" className="text-sm text-gray-300 hover:text-white">
+            Products
+          </Link>
+          <Link href="/roadmap" className="text-sm text-gray-300 hover:text-white">
+            Roadmap
+          </Link>
+          <Link href="/about" className="text-sm text-gray-300 hover:text-white">
+            About
+          </Link>
+          <Link href="/support" className="text-sm text-gray-300 hover:text-white">
+            Support
+          </Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4 shrink-0">
-          <Link href="/login">
-            <Button variant="ghost" size="sm">
-              Log in
-            </Button>
-          </Link>
-          <Link href="/pricing">
-            <Button size="sm">Get Started</Button>
-          </Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="flex items-center gap-2 md:hidden">
+        {/* Auth Buttons */}
+        <div className="flex items-center space-x-3">
+          <Button variant="default" size="sm" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm">
+            Log In
+          </Button>
           <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-            className="shrink-0"
+            variant="outline"
+            size="sm"
+            className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-4 py-2 text-sm bg-transparent"
           >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            Sign Up
           </Button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-t">
-          <div className="container py-4 grid gap-4">
-            <nav className="grid gap-2">
-              {mainNav.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </nav>
-            <div className="grid gap-2 pt-2 border-t">
-              <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start">
-                  Log in
-                </Button>
-              </Link>
-              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full">Get Started</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
     </header>
   )
 }
-
 
